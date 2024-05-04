@@ -5,6 +5,24 @@
     <title>SQL Injection Analysis</title>
     <link rel="stylesheet" href="../css/style.css" />
     <script src="../js/index.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tomorrow-night-blue.min.css"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"
+      defer
+    ></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"
+      defer
+    ></script>
+
+    <script defer>
+      hljs.highlightAll();
+    </script>
   </head>
   <body>
     <header>SQL injection code checker</header>
@@ -16,8 +34,16 @@
       </form>
     </main>
     <div id="results"></div>
+
     <div id="code">
-      <pre id="codeDisplay"></pre>
+      <pre>
+        <code id="codeDisplay" class="language-php">$name = "John";</code>
+    </pre>
     </div>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script> -->
   </body>
 </html>

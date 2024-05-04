@@ -22,6 +22,7 @@
 //         "An error occurred while processing your file.";
 //     });
 // }
+
 function uploadFile() {
   document.getElementById("codeDisplay").innerHTML = "";
   const fileInput = document.getElementById("fileInput");
@@ -35,20 +36,28 @@ function uploadFile() {
     .then((response) => response.json())
     .then((data) => {
       const count = data.vulnerabilities.length;
+      const vulnerabilities = data.vulnerabilities;
       console.log(count);
       //--------------------------------
       document.getElementById("results").innerHTML =
-        "<div>Number of vulnerabilities: " +
+        "<div class='numVul'>Number of vulnerabilities: " +
         count +
         "</div><div>Lines with vulnerabilities: " +
+        // vulnerabilities.forEach((line) => {
+        //   line + ", ";
+        // }) +
+        vulnerabilities +
         "</div>";
       //-------------------------------------------
       const codeDisplay = document.getElementById("codeDisplay");
       //   codeDisplay.style.padding = "2rem";
       const lines = data.content.split("\n");
+
       lines.forEach((line, index) => {
-        const lineElement = document.createElement("div");
-        lineElement.textContent = line;
+        const lineNumber = index + 1;
+        const lineElement = document.createElement("p");
+        lineElement.textContent = "    " + lineNumber + "   " + line;
+        // lineElement.textContent = line;
         if (data.vulnerabilities.includes(index + 1)) {
           lineElement.className = "vulnerable";
         }
