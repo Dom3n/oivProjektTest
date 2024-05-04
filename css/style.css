@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Jaini&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Jaini&family=Noto+Emoji:wght@300..700&display=swap');
 
 *{
     box-sizing: border-box;
@@ -9,6 +11,11 @@
 }
 body{
     overflow-x: hidden;
+    height: auto;
+    min-height: 100vh;
+    background-position: center;
+    background-color: white;
+    background-attachment: fixed;
 }
 
 header{
@@ -16,6 +23,7 @@ header{
     justify-content: center;
     align-items: center;
     background-color: darkturquoise;
+    /* background-color: rgba(0, 182, 204, 0.85);  */
     font-size: 2rem;
     padding: 1rem;
     font-weight:600;
@@ -29,6 +37,7 @@ main{
 }
 h3{
     padding: 1rem;
+    background-color: white;
 }
 
 #code{
@@ -36,21 +45,23 @@ h3{
     justify-content: center;
     align-items: center;
     width: 100vw;
-    /* padding: 2rem; */
 }
 
 
-/* background-color: rgb(64, 64, 64);
-    color:white; */
 
-/* #codeDisplay{
-    
+
+#codeDisplay{
+    background-color: #f3f3f3;
+    color:black;
     display: flex;
     justify-content: center;
     width: 80vw;
     flex-direction: column;
-    overflow-x: auto;
-} */
+    word-break: break-all;
+ font-family:monospace;
+ font-size: 1rem;
+    
+}
 
 
 #results{
@@ -64,11 +75,114 @@ h3{
 
 .vulnerable{
     background-color: rgba(255, 0, 0, 0.7);
-    opacity: 60;
 }
+
 
 .numVul{
     color: red;
     font-size: 1.2rem;
-    /* font-weight: 400; */
 }
+
+p{
+    text-wrap: wrap;
+    font-family: inherit;
+}
+
+button{
+    border-radius: 10px;
+    padding: 10px;
+ }
+ button:hover{
+    cursor: pointer;
+ }
+#fileInput{
+    border-radius: 10px;
+    padding: 10px; 
+    border: 2px solid black;
+} 
+
+
+.pedro{
+    position: absolute;
+    background-image: url("https://cdn.discordapp.com/attachments/1088136512283082803/1236434663682084987/racoon-pedro-ezgif.com-resize.gif?ex=6637ff03&is=6636ad83&hm=48f9cd8f4c68069b31f4742c2a08aac4ada28dc6839075df1fc8fbd57df889a4&");
+    right: 0;
+    top: 0;
+    height: 80px;
+    width: 80px;
+    background-position: center;
+    background-size: contain;
+    border-radius: 50%;
+}
+
+/*---------------------------Potegnem crto--------------------------------------*/
+/* 
+button, input[type="file"] {
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background-color: #007bff; 
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+
+  
+ 
+
+
+button:hover, input[type="file"]:hover {
+    background-color: #0056b3; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: white;
+    transform: rotate(0deg);
+}
+
+input[type="file"] {
+    padding: 10px;
+    border: 2px solid #ccc; 
+    background-color: #fff; 
+    color: black;
+}
+
+button:active {
+    transform: translateY(2px); 
+}
+header {
+    background-color: rgba(0, 182, 204, 0.85); 
+    color: white;
+    padding: 15px;
+    font-size: 24px;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#results, #code {
+    background-color: rgb(0, 0, 0,0);
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 960px;
+}
+
+#results{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    background-color: white;
+}
+
+#codeDisplay{
+    background-color: #f3f3f3e2;
+} 
+body{
+    overflow-x: hidden;
+    background-image: url("https://cdn.discordapp.com/attachments/1088136512283082803/1236434663682084987/racoon-pedro-ezgif.com-resize.gif?ex=6637ff03&is=6636ad83&hm=48f9cd8f4c68069b31f4742c2a08aac4ada28dc6839075df1fc8fbd57df889a4&");
+    background-repeat: no-repeat;
+    background-size: 40%;
+    height: auto;
+    min-height: 100vh;
+    background-position: center;
+    background-color: black;
+    background-attachment: fixed;
+}
+*/
