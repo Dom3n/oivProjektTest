@@ -37,20 +37,25 @@ function uploadFile() {
     .then((data) => {
       const count = data.vulnerabilities.length;
       const vulnerabilities = data.vulnerabilities;
-      console.log(count);
+      const risk = data.risk;
+      console.log(risk);
       //--------------------------------
       document.getElementById("results").innerHTML =
         "<div class='numVul'>Number of vulnerabilities: " +
         count +
         "</div><div>Lines with vulnerabilities: " +
-        // vulnerabilities.forEach((line) => {
-        //   line + ", ";
-        // }) +
         vulnerabilities +
-        "</div>";
+        "</div>" +
+        "<div>Risk level: <p id='risk'>" +
+        risk +
+        "</p></div>";
       //-------------------------------------------
       const codeDisplay = document.getElementById("codeDisplay");
-      //   codeDisplay.style.padding = "2rem";
+      const riskDisplay = document.getElementById("risk");
+      if (risk == "None") {
+        riskDisplay.style.color = "black";
+      }
+      codeDisplay.style.padding = "1rem 0";
       const lines = data.content.split("\n");
 
       lines.forEach((line, index) => {

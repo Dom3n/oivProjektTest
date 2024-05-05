@@ -105,10 +105,21 @@ app.post("/upload", upload.single("file"), (req, res) => {
     }
   });
 
+  let risk = "";
+
+  if (vulnerabilities.length >= 3) {
+    risk = "High";
+  } else if (vulnerabilities.length == 1) {
+    risk = "Low";
+  } else if (vulnerabilities.length == 0) {
+    risk = "None";
+  } else risk = "Moderate";
+
   // Return both the content and the vulnerable line numbers
   res.json({
     content: content,
     vulnerabilities: vulnerabilities,
+    risk: risk,
   });
 });
 

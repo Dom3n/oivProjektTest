@@ -58,9 +58,9 @@ h3{
     width: 80vw;
     flex-direction: column;
     word-break: break-all;
- font-family:monospace;
- font-size: 1rem;
-    
+    font-family:monospace;
+    font-size: 1rem;
+    border-radius: 2rem;
 }
 
 
@@ -112,6 +112,11 @@ button{
     background-position: center;
     background-size: contain;
     border-radius: 50%;
+}
+
+#risk{
+    color: red;
+    font-weight: 700;
 }
 
 /*---------------------------Potegnem crto--------------------------------------*/
